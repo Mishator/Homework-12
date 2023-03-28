@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         calculateWhatYear (2024);
         operatingSystemSelection(1, 2016);
+        calculateDeliveryTime(90);
     }
 
     public static void calculateWhatYear(int year) {
@@ -23,5 +24,20 @@ public class Main {
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
+     }
+
+     public static void calculateDeliveryTime(int deliveryDistance) {
+         if (deliveryDistance > 100) {
+             System.out.println("Доставки нет!");
+         } else {
+             int deliveryDays = 1;
+             if (deliveryDistance >20) {
+                 deliveryDays++;
+             }
+             if (deliveryDistance > 60) {
+                 deliveryDays++;
+             }
+             System.out.println("Потребуется дней: " + deliveryDays);
+         }
      }
 }
