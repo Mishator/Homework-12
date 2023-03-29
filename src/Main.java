@@ -1,5 +1,4 @@
 public class Main {
-    private static Object calculateWhatYear;
 
     public static void main(String[] args) {
         calculateWhatYear (2024);
@@ -26,7 +25,7 @@ public class Main {
         }
      }
 
-     public static void calculateDeliveryTime(int deliveryDistance) {
+     public static int calculateDeliveryTime(int deliveryDistance) {
          if (deliveryDistance > 100) {
              System.out.println("Доставки нет!");
          } else {
@@ -39,5 +38,6 @@ public class Main {
              }
              System.out.println("Потребуется дней: " + deliveryDays);
          }
+         return deliveryDistance;
      }
 }
