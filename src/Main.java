@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         calculateWhatYear (2024);
         operatingSystemSelection(1, 2016);
-        calculateDeliveryTime(90);
+        calculateDeliveryTime(50);
     }
 
     public static void calculateWhatYear(int year) {
@@ -26,11 +26,12 @@ public class Main {
      }
 
      public static int calculateDeliveryTime(int deliveryDistance) {
+         int deliveryDays = 0;
          if (deliveryDistance > 100) {
              System.out.println("Доставки нет!");
          } else {
-             int deliveryDays = 1;
-             if (deliveryDistance >20) {
+             deliveryDays = 1;
+             if (deliveryDistance > 20) {
                  deliveryDays++;
              }
              if (deliveryDistance > 60) {
@@ -38,6 +39,6 @@ public class Main {
              }
              System.out.println("Потребуется дней: " + deliveryDays);
          }
-         return deliveryDistance;
+         return deliveryDays;
      }
 }
